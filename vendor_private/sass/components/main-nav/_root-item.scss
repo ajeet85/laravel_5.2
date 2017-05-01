@@ -1,0 +1,47 @@
+.app {
+    .nav-root-item {
+        display: block;
+        @include padding( 'top', 10px );
+        @include padding( 'right', 10px );
+        @include padding( 'bottom', 10px );
+        @include padding( 'left', 20px );
+        border-bottom: 1px solid darken(map-get($blue-grey, lighten-1), 30%);
+        text-decoration: none;
+        color: map-get($blue-grey, lighten-1);
+    }
+
+    .nav-root-item:hover {
+        background-color: lighten(map-get($primary-blue, base), 10%);
+        color: #ffffff;
+
+        .icon {
+            color: map-get($pink, base);
+        }
+    }
+
+    .nav-root-item .icon {
+        float: right;
+        width: 30px;
+        text-align: center;
+    }
+
+    .nav-root-item + .child-menu {
+        display: none;
+    }
+
+    .nav-root-item.open + .child-menu {
+        display: block;
+    }
+
+    .nav-root-item.open {
+        color: #ffffff;
+        border-bottom: none;
+        background-color: map-get($pink, base);
+    }
+
+    .nav-root-item.open:hover {
+        .icon {
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.listing .cost {
+    display: inline-block;
+    color: map-get($blue-grey, lighten-4);
+
+    > span {
+        display: inline-block;
+        @include paddAll(3px);
+        @include padding('left', 10px);
+        @include padding('right', 10px);
+        // @include minWidth(120px);
+        width: 100%;
+        @include roundedCorners($rounded_edges);
+        border: 1px solid map-get($blue-grey, lighten-3);
+        background-color: transparent;
+    }
+}
+
+.listing .is-provider {
+    .cost {
+        background-color: #ffffff;
+        color: map-get($grey, darken-4);
+    }
+}

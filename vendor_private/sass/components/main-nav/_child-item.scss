@@ -1,0 +1,39 @@
+.app {
+    .child-menu {
+        @include padding( 'bottom', 10px );
+        border-bottom: 1px solid #f6f6f6;
+        @include fontSize( $base_font_size - 2);
+        background-color: map-get($blue-grey, lighten-5);
+        color: map-get($grey, darken-3);
+    }
+
+    .child-menu .current-organisation {
+        @include padding( 'right', 20px );
+        @include padding( 'left', 20px );
+
+        a {
+            display: block;
+            @include padding( 'top', 10px );
+            @include padding( 'bottom', 10px );
+            border-bottom: 1px solid map-get($grey, darken-1);
+            text-decoration: none;
+        }
+    }
+
+    .child-menu > ul {
+        @include padding( 'top', 10px );
+    }
+
+    .nav-child-item {
+        display: block;
+        @include padding( 'right', 20px );
+        @include padding( 'left', 20px );
+        @include margin( 'bottom', 2px );
+        text-decoration: none;
+    }
+
+    .nav-child-item.open {
+        font-family: 'latobold';
+        color: map-get($pink, base);
+    }
+}

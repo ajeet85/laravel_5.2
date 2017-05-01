@@ -1,0 +1,9 @@
+.app {
+    .current-user {
+        float: left;
+        @include margin('right', 10px);
+        @include fontSize($base_font_size);
+        font-family: 'latoregular';
+        color: map-get($primary-blue, base);
+    }
+}

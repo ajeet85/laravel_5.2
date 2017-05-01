@@ -1,0 +1,26 @@
+.app {
+    .organisation-section {
+        @include clearfix();
+        @include padding('top', 20px);
+        @include padding('bottom', 20px);
+        border-top: 1px solid map-get($blue-grey, lighten-4);
+    }
+
+    .organisation-section.import .overview {
+        float: left;
+        width: 50%;
+    }
+
+    .organisation-section.import .title {
+        @include margin('bottom', 5px);
+        font-family: 'latoregular';
+    }
+
+    .organisation-section.import .description {
+        @include fontSize($base_font_size - 2);
+    }
+
+    .organisation-section.import .button {
+        float: right;
+    }
+}

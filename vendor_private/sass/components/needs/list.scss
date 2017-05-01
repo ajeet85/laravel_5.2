@@ -1,0 +1,54 @@
+.app {
+    .areas-of-need * {
+        list-style-type: none;
+        display: block;
+
+        color: map-get($grey, darken-2);
+    }
+
+    .areas-of-need form {
+        float: right;
+    }
+
+    .areas-of-need .button {
+        float: right;
+        height: 40px;
+    }
+
+
+    .areas-of-need li a {
+        display: block;
+
+        @include padding('right', 20px);
+
+        @include padding('left', 20px);
+        @include height(40px);
+        background-color: map-get($grey, lighten-5);
+        border-bottom: 1px solid map-get($blue-grey, lighten-4);
+        background-color: map-get($grey, lighten-5);
+        @include fontSize($base_font_size - 2);
+        font-family: 'latoregular';
+        line-height: 40px;
+        text-decoration: none;
+
+        span {
+            display: inline;
+            @include padding('top', 10px);
+            @include padding('bottom', 10px);
+            background-color: transparent;
+        }
+    }
+
+    .areas-of-need li a:hover {
+        background-color: map-get($blue-grey, lighten-3);
+
+        span {
+            color: #ffffff;
+        }
+    }
+
+    .areas-of-need ul > li  a {
+        @include padding('left', 20px);
+    }
+
+}

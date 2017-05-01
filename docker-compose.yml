@@ -1,0 +1,31 @@
+version: '2'
+services:
+  app:
+    image: furl/thebe:1.0.0
+    container_name: trackerapp
+    ports:
+      - 3000:80
+    volumes:
+      - ./:/var/www/html
+    command: apache2-foreground
+    links:
+      - db
+      - cache
+    depends_on:
+      - db
+      - cache
+  db:
+    image: mysql:5.7.12
+    container_name: trackerdb
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassowrd
+      - MYSQL_DATABASE=trackerdb
+      - MYSQL_USER=trackeruser
+      - MYSQL_PASSWORD=trackerpassword
+  cache:
+    image: memcached:1.4.25
+    container_name: trackercache
+    ports:
+      - 11211:11211

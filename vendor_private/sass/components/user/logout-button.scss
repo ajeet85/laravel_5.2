@@ -1,0 +1,23 @@
+.app {
+    .logout-button {
+        float:right;
+    }
+
+    .logout-button button.button {
+        background-color: transparent;
+        color: map-get($primary-blue, base);
+    }
+
+    .logout-button button.button:hover {
+        // color: #ffffff;
+        // .icon {
+            color: map-get($primary-green, base);
+        // }
+
+    }
+
+    .logout-button .icon {
+        float: right;
+        @include margin('left', 10px);
+    }
+}

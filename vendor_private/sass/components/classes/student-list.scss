@@ -1,0 +1,22 @@
+.student-class-list {
+    list-style-type: none;
+
+    li {
+        @include padding('left', 10px);
+        border-bottom: 1px solid map-get($blue-grey, lighten-4);
+        font-family: 'latoregular';
+        @include lineHeight(40px);
+        color: map-get($grey, darken-2);
+        background-color: map-get($blue-grey, lighten-5);
+    }
+
+    li:hover {
+        background-color: map-get($blue-grey, lighten-3);
+        color: #ffffff;
+    }
+
+    label {
+        @include margin('left', 10px);
+        display: inline-block;
+    }
+}

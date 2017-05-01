@@ -1,0 +1,26 @@
+.auth .logo {
+    width: 100%;
+    @include padding('left', 20px);
+    @include padding('top', 20px);
+    @include padding('bottom', 20px);
+    @include margin('bottom', 20px);
+    background-color: #ffffff;
+}
+
+.auth .button {
+    width: 100%;
+    // @include paddAll(10px);
+    @include margin('bottom', $gutter);
+    @include fontSize($base_font_size);
+    background-color: map-get($pink, base);
+    font-family: 'latolight';
+    text-align: left;
+
+    &:hover {
+        background-color: map-get($pink, darken-1);
+    }
+}
+
+.auth p {
+    @include margin('bottom', 10px);
+}

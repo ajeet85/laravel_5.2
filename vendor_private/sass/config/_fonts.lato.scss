@@ -1,0 +1,36 @@
+$path: '/fonts/lato/';
+@font-face {
+    font-family: 'latoblack';
+    src        : url($path + 'lato-black.eot');
+    src        : url($path + 'lato-black.eot?#iefix') format('embedded-opentype'), url($path + 'lato-black.woff2') format('woff2'), url($path + 'lato-black.woff') format('woff'), url($path + 'lato-black.ttf') format('truetype'), url($path + 'lato-black.svg#latoblack') format('svg');
+    font-weight: normal;
+    font-style : normal;
+}
+@font-face {
+    font-family: 'latobold';
+    src        : url($path + 'lato-bold.eot');
+    src        : url($path + 'lato-bold.eot?#iefix') format('embedded-opentype'), url($path + 'lato-bold.woff2') format('woff2'), url($path + 'lato-bold.woff') format('woff'), url($path + 'lato-bold.ttf') format('truetype'), url($path + 'lato-bold.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style : normal;
+}
+@font-face {
+    font-family: 'latohairline';
+    src        : url($path + 'lato-hairline.eot');
+    src        : url($path + 'lato-hairline.eot?#iefix') format('embedded-opentype'), url($path + 'lato-hairline.woff2') format('woff2'), url($path + 'lato-hairline.woff') format('woff'), url($path + 'lato-hairline.ttf') format('truetype'), url($path + 'lato-hairline.svg#latohairline') format('svg');
+    font-weight: normal;
+    font-style : normal;
+}
+@font-face {
+    font-family: 'latolight';
+    src        : url($path + 'lato-light.eot');
+    src        : url($path + 'lato-light.eot?#iefix') format('embedded-opentype'), url($path + 'lato-light.woff2') format('woff2'), url($path + 'lato-light.woff') format('woff'), url($path + 'lato-light.ttf') format('truetype'), url($path + 'lato-light.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style : normal;
+}
+@font-face {
+    font-family: 'latoregular';
+    src        : url($path + 'lato-regular.eot');
+    src        : url($path + 'lato-regular.eot?#iefix') format('embedded-opentype'), url($path + 'lato-regular.woff2') format('woff2'), url($path + 'lato-regular.woff') format('woff'), url($path + 'lato-regular.ttf') format('truetype'), url($path + 'lato-regular.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style : normal;
+}

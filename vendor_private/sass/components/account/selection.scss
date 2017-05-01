@@ -1,0 +1,37 @@
+$gutter: 20px;
+.account-selection-page {
+    background-color: darken(map-get($primary-blue, base), 10%);
+}
+
+.account-selection {
+    position: absolute;
+    left: 0%; right: 0%; top: 100px;
+    margin: auto;
+    @include roundedCorners($rounded_edges + 2);
+    @include width(600px);
+    overflow: hidden;
+    background-color: map-get($grey, lighten-4);
+}
+
+.account-selection-message {
+    @include padding('top', $gutter);
+    @include padding('left', $gutter);
+    @include padding('right', $gutter);
+    @include padding('bottom', $gutter);
+    font-family: 'latolight';
+}
+
+.auth.account-selection select {
+    @include minWidth(250px);
+}
+
+.auth.account-selection .button {
+    display: inline-block;
+    width: auto;
+}
+
+.js {
+    .auth.account-selection .button {
+        // display: none;
+    }
+}

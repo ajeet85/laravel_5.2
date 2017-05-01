@@ -1,0 +1,49 @@
+$gutter: 20px;
+
+.login-page {
+    background-color: darken(map-get($primary-blue, base), 10%);
+}
+
+.login {
+    position: absolute;
+    left: 0%; right: 0%; top: 100px;
+    margin: auto;
+    @include roundedCorners($rounded_edges + 2);
+    @include width(300px);
+    overflow: hidden;
+    background-color: map-get($grey, lighten-4);
+}
+
+.login .text-input {
+    width: 100%;
+    @include padding('left', $gutter);
+    @include padding('right', $gutter);
+}
+
+.login .login-button {
+    width: 100%;
+    @include padding('left', $gutter);
+    @include padding('right', $gutter);
+    text-align: center;
+}
+
+.login .errors {
+    @include margin('bottom', $gutter);
+    @include padding('left', $gutter);
+    @include padding('right', $gutter);
+    color: map-get($pink, base);
+}
+
+.login .register {
+
+    @include padding('top', $gutter - 3);
+    @include padding('bottom', $gutter);
+    @include padding('left', $gutter);
+    @include padding('right', $gutter);
+    background-color: map-get($primary-blue, lighten-1);
+    color: #ffffff;
+
+    a {
+        font-family: 'latoregular';
+    }
+}

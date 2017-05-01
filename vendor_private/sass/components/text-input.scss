@@ -1,0 +1,72 @@
+$gutter: 20px;
+
+.input-group,
+.input-group-2 {
+    @include clearfix();
+
+}
+
+.input-group {
+    @include margin('bottom', 30px);
+    .text-input {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .select-wrapper,
+    .select-wrapper select {
+        width: 100%;
+    }
+}
+
+.input-group.split2 {
+
+    .text-input {
+        float: left;
+        width: 49%;
+    }
+
+    .text-input:last-child {
+        float: right;
+        margin-right: 0;
+    }
+}
+
+
+.text-input {
+    @include clearfix();
+    @include margin('bottom', 30px);
+    width: 50%;
+
+    > label {
+        display: block;
+        @include margin('bottom', 10px);
+        font-family: 'latoregular';
+        color: map-get($grey, darken-2);
+    }
+
+    > input[type=text],
+      input[type=password],
+      input[type=email]{
+        width: 100%;
+        display: block;
+        @include paddAll(7px);
+        @include roundedCorners($rounded_edges);
+        border: 1px solid map-get($grey, lighten-1);
+        @include fontSize( $base_font_size );
+        color: map-get($grey, darken-2);
+        font-family: 'latolight';
+    }
+}
+
+.text-input .error-message {
+    @include margin('top', 5px);
+    color: map-get($pink, base);
+}
+
+.text-input .description {
+    width: 70%;
+    @include margin('bottom', 10px);
+    @include fontSize( $base_font_size - 2 );
+    color: map-get($grey, darken-1);
+}

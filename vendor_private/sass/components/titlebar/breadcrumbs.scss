@@ -1,0 +1,31 @@
+.title-area {
+    .breadcrumbs {
+        list-style-type: none;
+    }
+
+    .breadcrumb {
+        float: left;
+        @include margin('right', 2px);
+        font-family: 'latoregular';
+        color: map-get($primary-blue, lighten-1);
+
+        &:after {
+            content: ' / ';
+        }
+
+        a {
+            border-bottom: 1px solid map-get($primary-blue, lighten-3);
+            text-decoration: none;
+
+            &:hover {
+                color: map-get($primary-green, base);
+            }
+        }
+    }
+    .breadcrumb.active {
+        font-family: 'latoblack';
+        &:after {
+            content: '';
+        }
+    }
+}

@@ -1,0 +1,132 @@
+body,
+html {
+    height     : 100%;
+    font-family: 'latolight';
+}
+
+.app-sidebar {
+    position: fixed;
+    @include width(200px);
+    height  : 100%;
+    border-right: 1px solid map-get($blue-grey, lighten-4);
+}
+
+.branding-area {
+    @include height(100px);
+}
+
+.app-content {
+    position: absolute;
+    @include left(200px);
+    right   : 0;
+    height  : 100%;
+}
+
+.menu-bar {
+    position: fixed;
+    right: 0; left:200px;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.utility-area {
+    @include clearfix();
+    @include height(50px);
+    width: 100%;
+    @include paddAll(10px);
+    @include padding('left', 20px);
+    @include padding('right', 20px);
+    line-height: 30px;
+    background-color: map-get($grey, lighten-2);
+}
+
+.title-area {
+    @include height(40px);
+    width: 100%;
+    @include paddAll(10px);
+    @include padding('left', 20px);
+    @include padding('right', 20px);
+    border-bottom: 1px solid map-get($grey, lighten-3);
+    @include fontSize($base_font_size - 3);
+    background-color: map-get($grey, lighten-5);
+    color: map-get($primary-blue, base);
+}
+
+.functions-area {
+    @include clearfix();
+    @include paddAll(10px);
+    @include padding('left', 20px);
+    @include padding('right', 20px);
+
+    border-bottom: 1px solid map-get($grey, lighten-3);
+    @include lineHeight(30px);
+
+    .filter-area {
+        @include clearfix();
+        display: table;
+        float: left;
+
+        form > * {
+            @include margin('right', 5px);
+            height: inherit;
+            float: left;
+            display: inline-block;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .text-input {
+            width: auto;
+        }
+
+        .text-input > input[type=text] {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+
+    .action-area {
+        float: right;
+        display: table;
+    }
+}
+
+.content-area {
+    position: absolute;
+    @include top(140px);
+    bottom  : 0;
+    width   : 100%;
+    overflow: auto;
+}
+
+.content-area .section {
+    @include padding('top', 20px);
+    @include padding('bottom', 20px);
+    border-top: 1px solid map-get($blue-grey, lighten-4);
+}
+
+.content-area .section .title {
+    @include margin('bottom', 5px);
+    font-family: 'latoregular';
+}
+
+.content-area.has-toolbar {
+    @include bottom(60px);
+}
+
+.editor-area {
+    @include clearfix();
+    bottom: 60px; top: 0; left: 0; right: 0;
+    @include paddAll(20px);
+}
+
+.tool-bar-area {
+    position: fixed;
+    bottom: 0; left: 200px; right: 0;
+    z-index: 1;
+    @include padding('left', 20px);
+    @include padding('right', 20px);
+    border-top:1px solid map-get($grey, lighten-3);
+    background-color: #ffffff;
+    @include lineHeight(60px);
+}

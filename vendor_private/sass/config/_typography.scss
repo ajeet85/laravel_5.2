@@ -1,0 +1,7 @@
+h1 {
+    @include margin('top', 20px);
+    @include margin('bottom', 5px);
+    font-family: 'latolight';
+    @include fontSize($base_font_size + 2);
+    color: map-get($grey, darken-2);
+}

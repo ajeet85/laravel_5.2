@@ -1,0 +1,63 @@
+.service-overview {
+    @include clearfix();
+    @include margin('top', 10px);
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: left;
+
+    .mis-service {
+        height: auto;
+        text-align: left;
+    }
+
+    .notes {
+        @include margin('top', 20px);
+        @include fontSize($base_font_size - 3);
+    }
+    
+    .text-input {
+        width: 100%;
+    }
+
+    button.button {
+        @include margin('bottom', 20px);
+    }
+}
+
+.service-overview .service-logo {
+    height: auto;
+    @include margin('bottom ', 10px);
+
+    img {
+        position: static;
+    }
+}
+
+.service-overview .service-description {
+    float: left;
+    width: 50%;
+
+    h1 {
+        @include fontSize($base_font_size + 5);
+    }
+
+    h2 {
+        @include fontSize($base_font_size - 3);
+        @include margin('bottom', 10px);
+    }
+
+    p, blockquote {
+        line-height: 1.4;
+    }
+
+    blockquote a {
+        display: block;
+    }
+
+
+}
+
+.service-overview .password-area {
+    @include margin('top', 20px);
+}

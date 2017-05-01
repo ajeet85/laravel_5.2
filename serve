@@ -1,0 +1,7 @@
+#!/bin/bash
+eval "$(docker-machine env default)" &&
+docker-compose up -d &&
+sleep 10s &&
+docker exec trackerapp php /var/www/html/artisan migrate &&
+docker exec trackerapp php /var/www/html/artisan db:seed &&
+docker exec trackerapp php /var/www/html/artisan queue:listen --sleep=5

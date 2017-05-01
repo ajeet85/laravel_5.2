@@ -1,0 +1,23 @@
+.app {
+    .account-switcher {
+        float: right;
+        @include margin('right', 20px);
+    }
+
+    .account-switcher > label,
+    .account-switcher > form {
+        display: inline-block;
+    }
+
+    .account-switcher > label {
+        @include fontSize($base_font_size - 2);
+        font-family: 'latoregular';
+        color: map-get($primary-blue, base);
+    }
+}
+
+.js .app {
+    .account-switcher button.button {
+        display: none;
+    }
+}

@@ -1,0 +1,17 @@
+.app {
+    .org-type-chooser {
+        float: left;
+        @include margin('top', -1px);
+    }
+
+    .org-type-chooser > label,
+    .org-type-chooser > form {
+        display: inline-block;
+    }
+}
+
+.js .app {
+    .org-type-chooser button.button {
+        display: none;
+    }
+}

@@ -1,0 +1,17 @@
+.app {
+    .organisation-switcher {
+        float: left;
+        @include margin('top', -1px);
+    }
+
+    .organisation-switcher > label,
+    .organisation-switcher > form {
+        display: inline-block;
+    }
+}
+
+.js .app {
+    .organisation-switcher button.button {
+        display: none;
+    }
+}

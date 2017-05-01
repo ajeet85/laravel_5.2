@@ -1,0 +1,52 @@
+button.button,
+.button {
+    position: relative;
+    display: inline-block;
+    @include padding('left', 10px);
+    @include padding('right', 10px);
+    @include roundedCorners($rounded_edges);
+    border: none;
+    line-height: 30px;
+    font-family: 'latoregular';
+    @include fontSize($base_font_size - 3);
+    text-decoration: none;
+    background-color: map-get($blue-grey, lighten-2);
+    color: #ffffff;
+    cursor: pointer;
+
+    &.has-icon {
+        @include padding('right', 30px);
+    }
+}
+
+.button .icon {
+    position: absolute;
+    right: 10px;
+}
+
+button.button:hover {
+    background-color: map-get($blue-grey, darken-4);
+}
+
+button.has-icon.icon-only,
+.button.has-icon.icon-only {
+    width: auto !important;
+    @include padding('left', 10px);
+    @include padding('right', 10px);
+    background-color: transparent;
+    color: map-get($blue-grey, lighten-2);
+    @include fontSize($base_font_size + 3);
+
+    .icon {
+        position: static;
+    }
+    .label {
+        display: none;
+    }
+
+    &:hover {
+        .icon {
+            color: map-get($blue-grey, darken-4);
+        }
+    }
+}

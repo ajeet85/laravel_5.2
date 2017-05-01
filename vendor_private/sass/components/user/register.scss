@@ -1,0 +1,68 @@
+$gutter: 20px;
+.register-page {
+    background-color: darken(map-get($primary-blue, base), 10%);
+}
+
+.registration {
+    position: absolute;
+    left: 0%; right: 0%; top: 100px;
+    margin: auto;
+    @include roundedCorners($rounded_edges + 2);
+    @include width(600px);
+    overflow: hidden;
+    background-color: map-get($grey, lighten-4);
+}
+
+.registration .input-group {
+    @include padding('left', $gutter);
+    @include padding('right', $gutter);
+}
+
+.registration .package-overview {
+    @include padding('left', $gutter);
+    @include padding('right', $gutter);
+    background-color: map-get($primary-blue, lighten-1);
+}
+
+.registration .package-overview .description {
+    @include padding('top', $gutter);
+    @include padding('bottom', $gutter);
+    color: #ffffff;
+}
+
+.registration .package-groups {
+    @include clearfix();
+    * {
+        list-style-type: none;
+    }
+}
+
+.registration .package-group {
+    float: left;
+    width: 32.4%;
+    @include margin('right', 5px);
+    @include roundedCorners($rounded_edges + 2);
+    font-family: 'latoregular';
+    text-align: center;
+    background-color: map-get($pink, base);
+    color: #ffffff;
+    overflow: hidden;
+
+    span {
+        display: inline-block;
+        @include paddAll( $gutter/2 );
+    }
+}
+
+.registration .package {
+    @include paddAll( $gutter/2 );
+    background-color: map-get($pink, lighten-1);
+}
+
+.registration .packages {
+    .free-trial-link {
+        display: inline-block;
+        @include paddAll( $gutter/2 );
+        background-color: map-get($pink, lighten-4);
+    }
+}

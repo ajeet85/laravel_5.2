@@ -1,0 +1,34 @@
+.register-thanks-page {
+    background-color: darken(map-get($primary-blue, base), 10%);
+}
+
+.registration-thanks {
+    position: absolute;
+    left: 0%; right: 0%; top: 100px;
+    margin: auto;
+    @include roundedCorners($rounded_edges + 2);
+    @include width(600px);
+    overflow: hidden;
+    background-color: map-get($grey, lighten-4);
+}
+
+.auth.registration-thanks .logo {
+    margin-bottom: 0;
+}
+
+.registration-thanks-message {
+    @include padding('top', $gutter);
+    @include padding('left', $gutter);
+    @include padding('right', $gutter);
+    @include padding('bottom', $gutter);
+    font-family: 'latolight';
+}
+
+.registration-thanks-button {
+    @include padding('top', $gutter);
+    @include padding('left', $gutter);
+    @include padding('right', $gutter);
+    @include padding('bottom', $gutter);
+    background-color: map-get($pink, base);
+    color: #ffffff;
+}

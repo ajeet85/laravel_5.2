@@ -1,0 +1,41 @@
+.mis-services {
+    @include clearfix();
+    @include margin('top', 10px);
+}
+
+.mis-service {
+    float: left;
+    @include paddAll(10px);
+    @include width(250px);
+    @include height(250px);
+    @include margin('right', 10px);
+    @include margin('bottom', 10px);
+    background-color: map-get($grey, lighten-4);
+    text-align: center;
+}
+
+.mis-service label {
+    display: inline-block;
+    font-family: 'latoregular';
+}
+
+.mis-service .provider {
+    @include margin('top', 5px);
+    @include fontSize($base_font_size - 3);
+}
+
+.mis-service .service-logo {
+    position: relative;
+    width: 100%;
+    @include height(125px);
+}
+
+.mis-service .service-logo img {
+    position: absolute;
+    left: -50%; right: -50%; top: -50%; bottom: -50%;
+    margin: auto;
+}
+
+.mis-service .button {
+    @include margin('top', 20px);
+}

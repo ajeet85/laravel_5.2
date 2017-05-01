@@ -1,0 +1,18 @@
+.app {
+    .pagination {
+        list-style-type: none;
+    }
+
+    .pagination li span,
+    .pagination li a {
+        float: left;
+        display: block;
+        @include paddAll(10px);
+        @include margin('right', 2px);
+        background-color: map-get($grey, lighten-2);
+    }
+
+    .pagination li.active span {
+        border-bottom: 2px solid map-get($pink, base);
+    }
+}

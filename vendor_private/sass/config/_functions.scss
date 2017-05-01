@@ -1,0 +1,126 @@
+@mixin clearfix() {
+    &:after,
+    &:before {
+        content: ' ';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+    *zoom: 1;
+}
+@mixin fa() {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+@mixin roundedCorners($size) {
+  border-radius: $size;
+
+  -moz-border-radius-bottomright: $size;
+  -moz-border-radius-bottomleft: $size;
+  -moz-border-radius-topleft: $size;
+  -moz-border-radius-topright: $size;
+
+  -webkit-border-bottom-right-radius: $size;
+  -webkit-border-bottom-left-radius: $size;
+  -webkit-border-top-right-radius: $size;
+  -webkit-border-top-left-radius: $size;
+}
+@function calculateRem( $pixels ) {
+    $remSize: $pixels / $base_font_size;
+    @return #{$remSize}rem;
+}
+@function calculateEm( $pixels ) {
+    $emSize: $pixels / $base_font_size * 1;
+    @return #{$emSize}em;
+}
+@mixin fontSize($pixels){
+    font-size: $pixels; //Fallback in px
+    font-size: calculateRem($pixels);
+}
+@mixin lineHeight($pixels){
+    line-height: $pixels;
+      line-height: calculateRem($pixels);
+}
+@mixin maxWidth($pixels) {
+    max-width: $pixels;
+    max-width: calculateRem($pixels);
+}
+@mixin minWidth($pixels) {
+    min-width: $pixels;
+    min-width: calculateRem($pixels);
+}
+@mixin width($pixels) {
+    width: $pixels;
+    width: calculateRem($pixels);
+}
+@mixin maxHeight($pixels) {
+    max-height: $pixels;
+    max-height: calculateRem($pixels);
+}
+@mixin minHeight($pixels) {
+    min-height: $pixels;
+    min-height: calculateRem($pixels);
+}
+@mixin right($pixels) {
+    right: $pixels;
+    right: calculateRem($pixels);
+}
+@mixin bottom($pixels) {
+    bottom: $pixels;
+    bottom: calculateRem($pixels);
+}
+@mixin left($pixels) {
+    left: $pixels;
+    left: calculateRem($pixels);
+}
+@mixin top($pixels) {
+    top: $pixels;
+    top: calculateRem($pixels);
+}
+@mixin maxWidth($pixels) {
+    max-width: $pixels;
+    max-width: calculateRem($pixels);
+}
+@mixin minWidth($pixels) {
+    min-width: $pixels;
+    min-width: calculateRem($pixels);
+}
+@mixin width($pixels) {
+    width: $pixels;
+    width: calculateRem($pixels);
+}
+@mixin maxHeight($pixels) {
+    max-height: $pixels;
+    max-height: calculateRem($pixels);
+}
+@mixin minHeight($pixels) {
+    min-height: $pixels;
+    min-height: calculateRem($pixels);
+}
+@mixin height($pixels) {
+    height: $pixels;
+    height: calculateRem($pixels);
+}
+@mixin paddAll( $pixels) {
+    padding: calculateRem($pixels);
+}
+@mixin padding( $prop, $pixels) {
+    padding-#{$prop}: $pixels;
+    padding-#{$prop}: calculateRem($pixels);
+}
+@mixin margin( $prop, $pixels) {
+  margin-#{$prop}: $pixels;
+  margin-#{$prop}: calculateRem($pixels);
+}
+@mixin marginAll( $pixels){
+  margin: $pixels;
+  margin: calculateRem($pixels);
+}

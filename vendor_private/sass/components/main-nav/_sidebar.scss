@@ -1,0 +1,21 @@
+.app-sidebar {
+    background-color: darken(map-get($primary-blue, base), 10%);
+}
+
+.branding-area {
+    position: relative;
+    // border-bottom: 1px solid darken(map-get($blue-grey, lighten-1), 30%);
+    background-color: map-get($primary-blue, base);
+
+}
+
+.branding-area .logo {
+    height: 100%;
+}
+
+.branding-area .logo img {
+    position: absolute;
+    left: 20px; top: 0%; bottom:0%;
+    margin: auto;
+    width: 70%;
+}

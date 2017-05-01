@@ -1,0 +1,358 @@
+.app {
+    .content-area > table {
+        position: relative;
+    }
+
+    table {
+
+        width: 100%;
+        height: 100%;
+        // table-layout: fixed;
+        border-collapse: collapse;
+        @include fontSize($base_font_size - 2);
+    }
+
+    table tbody tr ,
+    table thead tr {
+        display: table;
+        width: 100%;
+    }
+
+    table tbody tr {
+        background-color: map-get($grey, lighten-5);
+    }
+
+    .content-area > table thead {
+        position: absolute;
+        overflow-y: scroll;
+        display: block;
+    }
+
+    table thead {
+        width: 100%;
+    }
+
+    .content-area > table tbody {
+        position: absolute;
+        @include top(42px); @include bottom(60px);
+        display: block;;
+        overflow-y: scroll;
+    }
+
+    table tbody {
+        width: 100%;
+    }
+
+    table td, table th {
+
+    }
+
+    table th {
+        border-bottom: 3px solid map-get($blue-grey, lighten-3);
+    }
+
+    table td {
+        border-bottom: 1px solid map-get($blue-grey, lighten-4);
+    }
+
+    table a {
+        display: block;
+        text-decoration: none;
+    }
+
+    table tbody tr.listing-row:hover {
+        background-color: map-get($blue-grey, lighten-3);
+
+        td {
+            color: #ffffff;
+        }
+    }
+
+    table tbody tr.pagination-row {
+        position: fixed;
+        bottom: 0;
+        @include minHeight(60px);
+        border-top:1px solid map-get($grey, lighten-3);
+    }
+
+    table th i {
+        @include fontSize($base_font_size - 3);
+        font-style: normal;
+        font-family: 'latolight';
+    }
+
+    th.action,
+    td.action {
+        position: relative;
+        width: 3%;
+        padding-left: 0;
+        padding-right: 0;
+        @include maxWidth(35px);
+        @include minWidth(35px);
+        text-align: center;
+
+        button,
+        .button  {
+            width: 100%;
+            margin-top: -5px;
+        }
+    }
+
+    .listing td,
+    .listing th {
+        @include padding('top', 10px);
+        @include padding('right', 20px);
+        @include padding('bottom', 10px);
+        @include padding('left', 20px);
+        @include height(40px);
+        border-right: 1px solid map-get($blue-grey, lighten-4);
+        font-family: 'latoregular';
+        text-align: left;
+        color: map-get($grey, darken-2);
+        // margin-left: -3px;
+    }
+
+    .listing td:last-child,
+    .listing th:last-child {
+        border-right: none;
+    }
+
+    .listing.teacher {
+        // name column
+        th:first-child,
+        td:first-child {
+            width: 65%;
+            @include minWidth(175px);
+        }
+        // Provider column
+        th:first-child + th,
+        td:first-child + td {
+            width: 10%;
+            text-align: center;
+            @include minWidth(100px);
+        }
+
+        // Cost column
+        th:first-child + th + th,
+        td:first-child + td + td {
+            width: 15%;
+            @include minWidth(160px);
+        }
+    }
+
+    .listing.students {
+        // name column
+        th:first-child,
+        td:first-child {
+            width: 65%;
+            @include minWidth(175px);
+        }
+
+        // gender column
+        th:first-child + th,
+        td:first-child + td {
+            width: 10%;
+            @include minWidth(100px);
+        }
+
+        // date of birth column
+        th:first-child + th + th,
+        td:first-child + td + td {
+            width: 10%;
+            @include minWidth(130px);
+        }
+    }
+
+    .listing.classes {
+        // name column
+        th:first-child,
+        td:first-child {
+            width: 20%;
+            @include minWidth(175px);
+        }
+
+        // year column
+        th:first-child + th,
+        td:first-child + td {
+            width: 20%;
+            @include minWidth(175px);
+        }
+
+        // teacher column
+        th:first-child + th + th,
+        td:first-child + td + td {
+            width: 40%;
+            @include minWidth(175px);
+        }
+    }
+
+    .listing.resources {
+        // name column
+        th:first-child,
+        td:first-child {
+            width: 30%;
+            @include minWidth(175px);
+        }
+    }
+
+    .listing.provisions {
+        // name column
+        th:first-child,
+        td:first-child {
+            width: 25%;
+            @include minWidth(175px);
+        }
+
+        // description column
+        th:first-child + th,
+        td:first-child + td {
+            width: 25%;
+            @include minWidth(175px);
+        }
+
+        // start column
+        th:first-child + th + th,
+        td:first-child + td + td {
+            width: 20%;
+            @include minWidth(175px);
+        }
+
+        // end column
+        th:first-child + th + th + th,
+        td:first-child + td + td + td {
+            width: 20%;
+            @include minWidth(175px);
+        }
+    }
+
+    .listing.terms {
+        // name column
+        th:first-child,
+        td:first-child {
+            width: 20%;
+            @include minWidth(175px);
+        }
+
+        // start column
+        th:first-child + th,
+        td:first-child + td {
+            width: 20%;
+            @include minWidth(175px);
+        }
+
+        // end column
+        th:first-child + th + th,
+        td:first-child + td + td {
+            width: 20%;
+            @include minWidth(175px);
+        }
+    }
+
+    .listing.uk-schools {
+        // name column
+        th:first-child,
+        td:first-child {
+            width: 10%;
+            @include minWidth(175px);
+        }
+
+        // dfe column
+        th:first-child + th,
+        td:first-child + td {
+            width: 50%;
+            @include minWidth(175px);
+        }
+
+        // council column
+        th:first-child + th + th,
+        td:first-child + td + td {
+            width: 10%;
+            @include minWidth(175px);
+        }
+
+        // postcode column
+        th:first-child + th + th + th,
+        td:first-child + td + td + td {
+            width: 10%;
+            @include minWidth(175px);
+        }
+    }
+
+    .listing.invoices {
+        // name column
+        th:first-child,
+        td:first-child {
+            width: 30%;
+            @include minWidth(175px);
+        }
+
+        // amount column
+        th:first-child + th,
+        td:first-child + td {
+            width: 10%;
+            @include minWidth(175px);
+        }
+
+        // sent date column
+        th:first-child + th + th,
+        td:first-child + td + td {
+            width: 20%;
+            @include minWidth(175px);
+        }
+
+        // due date column
+        th:first-child + th + th + th,
+        td:first-child + td + td + td {
+            width: 20%;
+            @include minWidth(175px);
+        }
+
+        // paid column
+        th:first-child + th + th + th + th,
+        td:first-child + td + td + td + td {
+            width: 5%;
+            @include minWidth(70px);
+        }
+    }
+
+    .listing.invoice-items {
+        // name column
+        th:first-child,
+        td:first-child {
+            width: 50%;
+            @include minWidth(175px);
+        }
+
+        // quantity column
+        th:first-child + th,
+        td:first-child + td {
+            width: 10%;
+            @include minWidth(100px);
+            text-align: right;
+        }
+
+        // unit price column
+        th:first-child + th + th,
+        td:first-child + td + td {
+            width: 10%;
+            @include minWidth(110px);
+            text-align: right;
+        }
+
+        // total price column
+        th:first-child + th + th + th,
+        td:first-child + td + td + td {
+            width: 10%;
+            @include minWidth(110px);
+            text-align: right;
+        }
+    }
+
+    .listing.invoice-items.totals {
+        @include margin('top', 30px);
+    }
+
+    .listing.invoice-items.totals td {
+        font-family: 'latoblack';
+    }
+}

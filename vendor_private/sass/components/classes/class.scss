@@ -1,0 +1,8 @@
+.class {
+    @include margin('top', 10px);
+    border: 1px solid map-get($blue-grey, lighten-4);
+}
+
+.class-core-details {
+    @include paddAll(10px);
+}

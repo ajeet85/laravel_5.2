@@ -1,0 +1,51 @@
+label.select-wrapper {
+    position: relative;
+    display: inline-block;
+    // border-bottom: 1px solid map-get($grey, lighten-1);
+    border: 1px solid map-get($grey, lighten-2);
+    background-color: map-get($grey, lighten-5);
+    line-height: 30px;
+
+    .icon {
+        position: absolute;
+        top: 5px; right:5px;
+        color: map-get($primary-blue, lighten-2);
+        pointer-events: none;
+    }
+}
+
+select {
+    padding:0;
+    margin: 0;
+    @include padding('left', 10px);
+    @include padding('right', 50px);
+    border: none;
+    @include fontSize($base_font_size - 3);
+    color: map-get($primary-blue, base);
+    background-color: transparent;
+    line-height: inherit;
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius:0px;
+    outline:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+
+}
+
+.select .description {
+    width: 70%;
+    @include margin('bottom', 10px);
+    @include margin('top', 10px);
+    @include fontSize( $base_font_size - 2 );
+    color: map-get($grey, darken-1);
+}
+
+.select .label {
+    display: block;
+    @include margin('bottom', 10px);
+    font-family: 'latoregular';
+    color: map-get($grey, darken-2);
+}

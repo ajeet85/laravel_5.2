@@ -1,0 +1,38 @@
+.app {
+    .provision-resources {
+        border-left: 1px solid map-get($blue-grey, lighten-4);
+
+        li {
+            list-style-type: none;
+        }
+
+        .provision-resources-header {
+            @include lineHeight(50px);
+            @include padding('left', 10px);
+            @include padding('right', 10px);
+            font-family: 'latoregular';
+            color: map-get($primary-blue, base)
+        }
+
+        .provision-resources-title,
+        .checkbox-input {
+            display: block;
+            @include padding('left', 10px);
+            @include padding('right', 10px);
+            border-bottom: 1px solid map-get($blue-grey, lighten-4);
+            @include lineHeight(40px);
+            font-family: 'latoregular';
+            @include fontSize($base_font_size - 2);
+            color: map-get($grey, darken-2);
+        }
+
+        .provision-resources-title {
+            background-color: map-get($grey, lighten-3);
+            border-bottom: 2px solid map-get($blue-grey, lighten-2);
+        }
+
+        .checkbox-input {
+            background-color: map-get($grey, lighten-5);
+        }
+    }
+}

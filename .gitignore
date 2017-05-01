@@ -1,0 +1,9 @@
+.DS_Store
+.env
+composer.lock
+/nbproject
+/vendor
+/vendor_bower
+/node_modules
+/public/storage
+scalr.pem

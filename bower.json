@@ -1,0 +1,14 @@
+{
+  "name": "provision-tracker",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "jquery": "1.11.0",
+    "velocity": "~1.2.3",
+    "breakpoint-sass": "2.2.0",
+    "font-awesome": "4.6.3"
+  },
+  "dependencies": {
+    "angular-material": "^1.0.9"
+  }
+}

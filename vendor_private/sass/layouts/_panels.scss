@@ -1,0 +1,19 @@
+.panel {
+
+}
+
+.panel.col-1o2 {
+    float: left;
+    @include padding('right', 5px);
+    width: 50%;
+}
+.panel.col-2o2 {
+    float: right;
+    @include padding('left', 5px);
+    width: 50%;
+
+    &.bleed {
+        position:absolute;
+        right: 0; top: 0;
+    }
+}
